@@ -1,0 +1,83 @@
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\utils\executor.py
+LINE: 362
+TIME: 27.10.2022 23:32:55
+MESSAGE: Bot: Когнитивные искажения_Bot [@AllCognitiveBiases_Bot]
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py
+LINE: 358
+TIME: 27.10.2022 23:32:55
+MESSAGE: Start polling.
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py
+LINE: 433
+TIME: 27.10.2022 23:40:13
+MESSAGE: Stop polling...
+
+[WARNING]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\utils\executor.py
+LINE: 329
+TIME: 27.10.2022 23:40:13
+MESSAGE: Goodbye!
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\utils\executor.py
+LINE: 362
+TIME: 27.10.2022 23:40:15
+MESSAGE: Bot: Когнитивные искажения_Bot [@AllCognitiveBiases_Bot]
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py
+LINE: 358
+TIME: 27.10.2022 23:40:15
+MESSAGE: Start polling.
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py
+LINE: 433
+TIME: 27.10.2022 23:40:19
+MESSAGE: Stop polling...
+
+[WARNING]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\utils\executor.py
+LINE: 329
+TIME: 27.10.2022 23:40:19
+MESSAGE: Goodbye!
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\utils\executor.py
+LINE: 362
+TIME: 27.10.2022 23:41:44
+MESSAGE: Bot: Когнитивные искажения_Bot [@AllCognitiveBiases_Bot]
+
+[INFO]
+MODULE: C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py
+LINE: 358
+TIME: 27.10.2022 23:41:44
+MESSAGE: Start polling.
+
+[ERROR]
+MODULE: C:\Users\rsady\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py
+LINE: 1738
+TIME: 27.10.2022 23:41:52
+MESSAGE: Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'int' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\handlers\start.py", line 31, in start
+    users_data = await getters.get_user_data(message.from_user.id)
+  File "C:\Users\rsady\Desktop\prog\sdashey_bot\database\getters.py", line 19, in get_user_data
+    return dict(zip(keys.users, users_data[0]))
+TypeError: 'int' object is not iterable
