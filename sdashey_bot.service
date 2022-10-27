@@ -1,0 +1,15 @@
+[Unit]
+Description=sdashey_bot
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/home/sdashey_bot/venv/bin/python bot.py
+ExecReload=/home/sdashey_bot/venv/bin/python bot.py
+WorkingDirectory=/home/sdashey_bot/
+KillMode=process
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
